@@ -1,4 +1,5 @@
 import React, { useEffect, ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Header from './Header';
@@ -11,7 +12,12 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const location = useLocation();
+
   useEffect(() => {
+    // Scroll to top when route changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     gsap.fromTo('.fade-in-up', 
       { opacity: 0, y: 30 },
       { 
@@ -26,7 +32,7 @@ export default function Layout({ children }: LayoutProps) {
         }
       }
     );
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">

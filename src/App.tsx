@@ -41,6 +41,7 @@ import ScientificCalculator from './pages/calculators/ScientificCalculator';
 import LoanCalculator from './pages/calculators/LoanCalculator';
 import SipCalculator from './pages/calculators/SipCalculator';
 import MutualFundCalculator from './pages/calculators/MutualFundCalculator';
+import CssToTailwind from './pages/tools/CssToTailwind';
 
 function App() {
   return (
@@ -87,6 +88,7 @@ function App() {
               <Route path="/calculator/loan" element={<LoanCalculator />} />
               <Route path="/calculator/sip" element={<SipCalculator />} />
               <Route path="/calculator/mutual-fund" element={<MutualFundCalculator />} />
+              <Route path="/css-to-tailwind" element={<CssToTailwind />} />
             </Routes>
           </Layout>
         </Router>

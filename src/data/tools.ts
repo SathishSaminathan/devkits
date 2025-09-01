@@ -279,5 +279,19 @@ export const toolCategories = [
         color: 'bg-teal-600'
       }
     ]
+  },
+  {
+    name: 'Converters & Utilities',
+    description: 'CSS converters and utility tools',
+    icon: Wand2,
+    tools: [
+      {
+        name: 'CSS to Tailwind',
+        description: 'Convert CSS styles to Tailwind CSS classes',
+        icon: Wand2,
+        path: '/css-to-tailwind',
+        color: 'bg-cyan-600'
+      }
+    ]
   }
 ];
